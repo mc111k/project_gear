@@ -10,9 +10,11 @@ import android.os.Vibrator;
 import android.support.wearable.view.CardFrame;
 import android.support.wearable.view.CardScrollView;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.support.wearable.view.GridViewPager;
 import android.support.wearable.view.GridPagerAdapter;
@@ -94,7 +96,13 @@ public class MyWearActivity extends Activity {
         cf3.addView(tv3);
         final CardFrame cf4 = new CardFrame(this);
         cf4.setLayoutParams(new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT));
-        cf4.addView(tv4);
+        //cf4.addView(tv4);
+        cf4.setBackgroundColor(Color.WHITE);
+
+        LayoutInflater inflater = LayoutInflater.from(this);
+        RelativeLayout relativeLayout =
+                (RelativeLayout) inflater.inflate(R.layout.speedcontrol_square_dark, null, false);
+        cf4.addView(relativeLayout);
 
         final List<List<CardFrame>> textViewList = new ArrayList<List<CardFrame>>();
         List<CardFrame> row1 = new ArrayList<CardFrame>();
