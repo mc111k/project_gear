@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyActivity"
+    tools:deviceIds="wear_round">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/hello_round" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vibrate_button_label_start"
+        android:id="@+id/vib_button"
+        android:enabled="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@color/grey"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/white"
+        android:layout_alignBaseline="@+id/slider_control"
+        android:layout_alignBottom="@+id/slider_control"
+        android:layout_toStartOf="@+id/slider_control" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/slider_control"
+        android:layout_gravity="right"
+        android:checked="true"
+        android:textColor="@color/white"
+        style="@style/Theme.Wearable"
+        android:background="@color/white"
+        android:layout_alignBottom="@+id/text"
+        android:layout_alignEnd="@+id/text" />
+</RelativeLayout>

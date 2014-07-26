@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_frame"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    tools:context=".MyWearActivity"
+    tools:deviceIds="wear_square"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight=".5"
+        android:weightSum="1">
+
+        <com.kmc.MetronomeWear.AutoRepeatButton
+            android:id="@+id/button_increase"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:clickable="true"
+            android:enabled="true"
+            android:freezesText="true"
+            android:longClickable="true"
+            android:text="@string/increase_bpm_label"
+            android:textColor="@color/black"
+            android:hapticFeedbackEnabled="true"
+            android:theme="@style/TextAppearance.Wearable.Large" />
+
+        <com.kmc.MetronomeWear.AutoRepeatButton
+            android:id="@+id/button_decrease"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:clickable="true"
+            android:enabled="true"
+            android:freezesText="true"
+            android:longClickable="true"
+            android:text="@string/decrease_bpm_label"
+            android:textColor="@color/black"
+            android:hapticFeedbackEnabled="true"
+            android:theme="@style/TextAppearance.Wearable.Large" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_other"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="0.5"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/bpm_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bpm_text_label"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="@dimen/card_content_padding_rect_top"
+            android:layout_weight="0.5"
+            android:layout_gravity="center_vertical|right"
+            android:textColor="@color/blue" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vibrate_button_label_start"
+            android:id="@+id/vib_button"
+            android:layout_weight="0.5"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</LinearLayout>
